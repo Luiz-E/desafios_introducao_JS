@@ -1,13 +1,31 @@
-button {
-    background-color: rgb(173, 216, 230);
-    border: 1px solid black;
-    outline: none;
-    height: 2rem;
-    border-radius: 15%;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+
+* {
+    font-family: "Open Sans", sans-serif;
 }
 
-.texto {
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: #bee9f7;
     border: 1px solid black;
-    height: 1.5rem;
-    border-radius: 5%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+#input {
+    line-height: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px 10px 30px 0;
+}
+
+:checked + label {
+    text-decoration: line-through;
 }

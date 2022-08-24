@@ -3,16 +3,22 @@ const input = document.querySelector("#input")
 const lista = document.querySelector(".lista")
 
 botao.addEventListener("click", () => {
-    adicionar()
+    if (input.value === "") return
+    adicionar(input.value)
+    input.value = ""
 })
 
-function adicionar() {
+function adicionar(novaTarefa) {
     const container = document.createElement("div")
+
     const checkBox = document.createElement("input")
-    const p = document.createElement("label")
-    p.setAttribute("for", input.value)
     checkBox.setAttribute("type", "checkbox")
+
+    const nodeTarefa = document.createTextNode(novaTarefa)
+    const tarefa = document.createElement("label")
+    tarefa.appendChild(nodeTarefa)
+
     container.appendChild(checkBox)
-    container.appendChild(p)
+    container.appendChild(tarefa)
     lista.appendChild(container)
 }

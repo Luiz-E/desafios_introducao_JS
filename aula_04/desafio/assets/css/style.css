@@ -1,0 +1,13 @@
+button {
+    background-color: rgb(173, 216, 230);
+    border: 1px solid black;
+    outline: none;
+    height: 2rem;
+    border-radius: 15%;
+}
+
+.texto {
+    border: 1px solid black;
+    height: 1.5rem;
+    border-radius: 5%;
+}
